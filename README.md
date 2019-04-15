@@ -5,7 +5,8 @@
 -------
 
 为了吸引读者的兴趣，先把demo放到前面：   
-下面有几个我自己写的演示**多页面通讯的demo**, 为了正常运行，请用最新的chrome浏览器打开。
+下面有几个我自己写的演示**多页面通讯的demo**, 为了正常运行，请用最新的chrome浏览器打开。   
+demo的源码地址[https://github.com/xiangwenhu/page-communication/tree/master/docs](https://github.com/xiangwenhu/page-communication/tree/master/docs)
 
 * [首页](https://xiangwenhu.github.io/page-communication/)
 * [setInterval + sessionStorage](https://xiangwenhu.github.io/page-communication/setInterval/index.html)
