@@ -4,6 +4,17 @@
 
 -------
 
+为了吸引读者的兴趣，先把demo放到前面：   
+下面有几个我自己写的演示**多页面通讯的demo**, 为了正常运行，请用最新的chrome浏览器打开。
+
+* [首页](https://xiangwenhu.github.io/page-communication/)
+* [setInterval + sessionStorage](https://xiangwenhu.github.io/page-communication/setInterval/index.html)
+* [localStorage](https://xiangwenhu.github.io/page-communication/localStorage/index.html)
+* [BroadcastChannel](https://xiangwenhu.github.io/page-communication/BroadcastChannel/index.html)
+* [SharedWorker](https://xiangwenhu.github.io/page-communication/SharedWorker/index.html)
+
+------
+
 为什么会扯到这个话题，最初是源于听 https://y.qq.com/ QQ音乐，
 *  播放器处于单独的一个页面 
 *  当你在另外的一个页面搜索到你满意的歌曲的时候，点击播放或添加到播放队列
@@ -48,16 +59,6 @@
 
 到这里，我觉得一般的前端人员能想到的比较正经的方案应该是上面三种啦。   
 当然，我们接下来说说可能不是那么常见的另外三种方式。
-
-**下面有几个我自己写的演示通讯的demo, 为了正常运行，请用最新的chrome浏览器打开。**
-
-* [首页](https://xiangwenhu.github.io/page-communication/)
-* [setInterval + sessionStorage](https://xiangwenhu.github.io/page-communication/setInterval/index.html)
-* [localStorage](https://xiangwenhu.github.io/page-communication/localStorage/index.html)
-* [BroadcastChannel](https://xiangwenhu.github.io/page-communication/BroadcastChannel/index.html)
-* [SharedWorker](https://xiangwenhu.github.io/page-communication/SharedWorker/index.html)
-
-
 
 
 1. ### StorageEvent
