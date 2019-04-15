@@ -49,8 +49,18 @@
 到这里，我觉得一般的前端人员能想到的比较正经的方案应该是上面三种啦。   
 当然，我们接下来说说可能不是那么常见的另外三种方式。
 
+**下面有几个我自己写的演示通讯的demo, 为了正常运行，请用最新的chrome浏览器打开。**
 
-4. ### StorageEvent
+* [首页](https://xiangwenhu.github.io/page-communication/)
+* [setInterval + sessionStorage](https://xiangwenhu.github.io/page-communication/setInterval/index.html)
+* [localStorage](https://xiangwenhu.github.io/page-communication/localStorage/index.html)
+* [BroadcastChannel](https://xiangwenhu.github.io/page-communication/BroadcastChannel/index.html)
+* [SharedWorker](https://xiangwenhu.github.io/page-communication/SharedWorker/index.html)
+
+
+
+
+1. ### StorageEvent
 Page 1
 ```js
 localStorage.setItem('message',JSON.stringify({
