@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>setInterval Page 1</title>
+  </head>
+  <body>
+    <h3>Page 2</h3>
+    <section style="margin-top:50px; text-align: center">
+      <input id="inputMessage" value="page 2的测试消息" />
+      <input type="button" value="发送消息" id="btnSend" />
+      <section id="messages">
+        <p>收到的消息：</p>
+      </section>
+    </section>
+
+    <script>
+      var messagesEle = document.getElementById("messages");
+      var messageEl = document.getElementById("inputMessage");
+      var btnSend = document.getElementById("btnSend");
+      var lastMessage = null;
+
+      setInterval(() => {
+        var message = sessionStorage.getItem("ls-message1");
+        try {
+          if (message) {
+            message = JSON.parse(message);
+            if (!lastMessage || lastMessage.date != message.date) {
+              appendMessage(message);
+              lastMessage = message;
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }, 200);
+
+      function appendMessage(data) {
+        var msgEl = document.createElement("p");
+        msgEl.innerText = data.date + " " + data.from + ":" + data.message;
+        messagesEle.appendChild(msgEl);
+      }
+
+      btnSend.addEventListener("click", function() {
+        var message = messageEl.value;
+
+        sessionStorage.setItem(
+          "ls-message2",
+          JSON.stringify({
+            date: Date.now(),
+            message,
+            from: "page 2"
+          })
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>localStorage Page 1</title>
+  </head>
+  <body>
+    <h3>Page 1</h3>
+    <section style="margin-top:50px; text-align: center">
+      <input id="inputMessage" value="page 1的测试消息" />
+      <input type="button" value="发送消息" id="btnSend" />
+      <section id="messages">
+        <p>收到的消息：</p>
+      </section>
+    </section>
+
+    <script>
+      var messagesEle = document.getElementById("messages");
+      var messageEl = document.getElementById("inputMessage");
+      var btnSend = document.getElementById("btnSend");
+      //
+      window.addEventListener("storage", function(e) {
+        if (e.key === "ls-message") {
+          var msgEl = document.createElement("p");
+          var data = JSON.parse(e.newValue);
+          msgEl.innerText = data.date + " " + data.from + ":" + data.message;
+          messagesEle.appendChild(msgEl);
+        }
+      });
+
+      btnSend.addEventListener("click", function() {
+        var message = messageEl.value;
+
+        localStorage.setItem(
+          "ls-message",
+          JSON.stringify({
+            date: new Date().toLocaleString(),
+            message,
+            from: "page 1"
+          })
+        );
+      });
+    </script>
+  </body>
+</html>
